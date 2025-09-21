@@ -1,4 +1,13 @@
 {
+  "name": "assessment-management-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Assessment Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
@@ -8,7 +17,10 @@
     "jsonwebtoken": "^9.0.2",
     "puppeteer": "^24.22.0"
   },
-  "scripts": {
-    "test": "jest"
-  }
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["health", "assessment", "api", "nodejs", "express"],
+  "author": "Your Name",
+  "license": "MIT"
 }

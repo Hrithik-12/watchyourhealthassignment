@@ -6,7 +6,7 @@ const { createUser, findUserByEmail, findUserById, validatePassword } = require(
 const router = express.Router();
 
 // JWT Secret (in production, use environment variable)
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-here';
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
 // Validation helpers
 const validateEmail = (email) => {

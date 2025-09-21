@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from './Authcontext';
+import { apiConfig } from '../config/api.js';
 
 const Dashboard = () => {
   const { user, logout, token } = useAuth();
@@ -19,7 +20,7 @@ const Dashboard = () => {
     setMessage('');
 
     try {
-      const response = await fetch(`http://localhost:3000/${endpoint}`, {
+      const response = await fetch(endpoint === 'generate-report-download' ? apiConfig.endpoints.reports.generateDownload : apiConfig.endpoints.reports.generatePreview, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
